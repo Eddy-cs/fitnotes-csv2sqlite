@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.4"
+  },
+  "type": "module"
+}
