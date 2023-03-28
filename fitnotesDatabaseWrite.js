@@ -23,12 +23,14 @@ async function writeToFitnotes(workoutData) {
       setCounter++;
       process.stdout.clearLine();
       process.stdout.cursorTo(0);
-      process.stdout.write(`Sets inserted: ${setCounter}`);
+      process.stdout.write(`Succesfully inserted: ${setCounter} sets`);
     } else {
       db.run(
         `INSERT INTO exercise(_id, name,  category_id, exercise_type_id) VALUES(NULL, "${workoutData[i].exercise}", 1, 0)`
       );
-      console.log(`\rNew exercise "${workoutData[i].exercise}" inserted`);
+      console.log(
+        `\rNew exercise inserted:"${workoutData[i].exercise}" inserted`
+      );
       i--;
     }
   }
